@@ -8,7 +8,7 @@ def viz_rand_mdots(mdots, radius):
 	ax = plt.axes(xlim=(-radius / 2, radius*2.5), ylim=(-radius/2, radius*2.5))
 	ax.set_axis_bgcolor("black")
 	ax.set_aspect('equal')
-	ax.xaxis.set_visible(False)
+	ax.xaxis.set_visible(False)	
 	ax.yaxis.set_visible(False)
 	particles, = ax.plot([], [], 'wo', ms=1)
 
@@ -36,5 +36,5 @@ def viz_rand_mdots(mdots, radius):
 
 if __name__ == "__main__":
 	radius = 128
-	mdots = rand_mdots(np.pi, coherence = 0.2, radius=radius)
+	mdots = rand_mdots(np.pi, coherence = 0.05, radius=radius)
 	viz_rand_mdots(mdots, radius)
